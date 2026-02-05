@@ -23,6 +23,7 @@ import a from 'a';
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     });
     const formatted = getCodeFromAst(sortedNodes, code);

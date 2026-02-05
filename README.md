@@ -253,6 +253,12 @@ import b from 'b'
 import c from 'c'
 ```
 
+### `importOrderSortGroups`
+**type**: `boolean`
+**default value**: `true`
+
+By default, the plugin sorts imports within groups. If you need to keep ordering within groups consistent, set this option to false.
+
 
 ### Ignoring import ordering
 

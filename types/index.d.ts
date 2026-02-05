@@ -133,6 +133,13 @@ used to order imports within each match group.
      * @default []
      */
     importOrderExclude?: string[];
+
+    /**
+     * A boolean value to enable or disable sorting imports within their groups.
+     *
+     * @default true
+     */
+    importOrderSortGroups?: boolean;
 }
 
 export type PrettierConfig = PluginConfig & Config;

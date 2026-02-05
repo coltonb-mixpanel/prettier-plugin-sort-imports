@@ -93,6 +93,12 @@ const options: Options = {
         default: 'with',
         description: 'Provide a keyword for import attributes',
     },
+    importOrderSortGroups: {
+        type: 'boolean',
+        category: 'Global',
+        default: true,
+        description: 'Should imports be sorted within groups?',
+    },
 };
 
 export default {

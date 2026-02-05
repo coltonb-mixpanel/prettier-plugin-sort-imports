@@ -22,6 +22,7 @@ export function preprocessor(code: string, options: PrettierOptions) {
         importOrderSideEffects,
         importOrderImportAttributesKeyword,
         importOrderExclude,
+        importOrderSortGroups,
         filepath,
     } = options;
 
@@ -62,6 +63,7 @@ export function preprocessor(code: string, options: PrettierOptions) {
         importOrderSortSpecifiers,
         importOrderSortByLength,
         importOrderSideEffects,
+        importOrderSortGroups,
     });
 
     return getCodeFromAst(allImports, code, injectIdx, {

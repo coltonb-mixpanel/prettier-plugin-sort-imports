@@ -7,10 +7,16 @@ export const getSortedNodesGroup = (
     imports: ImportDeclaration[],
     options: Pick<
         PrettierOptions,
-        'importOrderGroupNamespaceSpecifiers' | 'importOrderSortByLength'
+        | 'importOrderGroupNamespaceSpecifiers'
+        | 'importOrderSortByLength'
+        | 'importOrderSortGroups'
     >,
 ) => {
     return imports.sort((a, b) => {
+        if (options.importOrderSortGroups === false) {
+            return 0;
+        }
+
         const aLength = (a.end || 0) - (a.start || 0);
         const bLength = (b.end || 0) - (b.start || 0);
 

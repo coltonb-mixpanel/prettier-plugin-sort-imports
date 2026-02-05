@@ -32,6 +32,7 @@ test('it returns all sorted nodes', () => {
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
 
@@ -78,6 +79,7 @@ test('it returns all sorted nodes case-insensitive', () => {
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
 
@@ -124,6 +126,7 @@ test('it returns all sorted nodes with sort order', () => {
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
 
@@ -170,6 +173,7 @@ test('it returns all sorted nodes with sort order case-insensitive', () => {
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
     expect(getSortedNodesNames(sorted)).toEqual([
@@ -215,6 +219,7 @@ test('it returns all sorted import nodes with sorted import specifiers', () => {
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
     expect(getSortedNodesNames(sorted)).toEqual([
@@ -260,6 +265,7 @@ test('it returns all sorted import nodes with sorted import specifiers with case
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
     expect(getSortedNodesNames(sorted)).toEqual([
@@ -305,6 +311,7 @@ test('it returns all sorted nodes with custom third party modules', () => {
         importOrderGroupNamespaceSpecifiers: false,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
     expect(getSortedNodesNames(sorted)).toEqual([
@@ -331,6 +338,7 @@ test('it returns all sorted nodes with namespace specifiers at the top', () => {
         importOrderGroupNamespaceSpecifiers: true,
         importOrderSortSpecifiers: false,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
         importOrderSideEffects: true,
     }) as ImportDeclaration[];
 
@@ -367,6 +375,7 @@ test('it returns the default separations if `importOrderSeparation` is false', (
         importOrderSortSpecifiers: false,
         importOrderSideEffects: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
     });
     expect(getSeparationData(sorted)).toEqual([
         { type: 'ImportDeclaration', value: 'XY' },
@@ -394,6 +403,7 @@ test('it returns default import module separations', () => {
         importOrderSortSpecifiers: false,
         importOrderSideEffects: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
     });
     expect(getSeparationData(sorted)).toEqual([
         { type: 'ImportDeclaration', value: 'XY' },
@@ -426,6 +436,7 @@ test('it returns targeted import module separations', () => {
         importOrderSortSpecifiers: false,
         importOrderSideEffects: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
     });
     expect(getSeparationData(sorted)).toEqual([
         { type: 'ImportDeclaration', value: 'XY' },
@@ -459,6 +470,7 @@ test('it never returns a separation at the top of the list (leading separator)',
         importOrderSortSpecifiers: false,
         importOrderSideEffects: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
     });
     expect(getSeparationData(sorted)).toEqual([
         { type: 'ImportDeclaration', value: './test' },
@@ -480,6 +492,7 @@ test('it never returns a separation at the top of the list (zero preceding impor
         importOrderSortSpecifiers: false,
         importOrderSideEffects: true,
         importOrderSortByLength: null,
+        importOrderSortGroups: true,
     });
     expect(getSeparationData(sorted)).toEqual([
         { type: 'ImportDeclaration', value: './test' },
